@@ -1,4 +1,4 @@
-# http://michaelmonteleone.net
+# http://arka-nitd.github.io
 
 This is the raw text source of my jekyll-based personal site, [https://arka-nitd.github.io](https://arka-nitd.github.io).  
 
