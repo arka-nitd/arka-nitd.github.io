@@ -49,3 +49,4 @@ exclude:
  - Rakefile
  - README.markdown
  - .git
+highlighter: pygments
