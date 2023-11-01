@@ -5,42 +5,42 @@
 			    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>http://arka-nitd.github.io/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>	
     
     <url>
         <loc>http://arka-nitd.github.io/work/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://arka-nitd.github.io/research/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://arka-nitd.github.io/projects/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://arka-nitd.github.io/blog/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://arka-nitd.github.io/resume/</loc>
-        <lastmod>2023-11-01T21:58:47+00:00</lastmod>
+        <lastmod>2023-11-01T22:01:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
