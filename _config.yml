@@ -1,0 +1,51 @@
+title: Arka Roy
+url: http://arka-nitd.github.io
+description: 'Personal site of Arka Roy, Software Developer @InMobi'
+keywords:
+ - Arka Roy
+ - Arka
+plugins:
+  - jekyll-textile-converter
+author:
+    name: Arka Roy
+    email: arka.nitdgp14@gmail.com
+    googlescholar: https://scholar.google.com/citations?user=MF3j7q4AAAAJ&hl=en
+    twitter: https://twitter.com/arka_nitd
+    github: http://github.com/arka-nitd
+    facebook: http://www.facebook.com/mailtoarko
+    linkedin: http://www.linkedin.com/in/arka-nitd
+
+sections:
+ - work
+ - research
+ - projects
+ - blog
+ - resume
+stylesheets:
+ - /assets/themes/default/css/timeline.css
+ - /assets/themes/default/css/screen.css?52480=52480
+ - /assets/themes/default/css/print.css
+scripts:
+ - https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
+ - /assets/themes/default/js/site.js
+cv: /assets/cv/CV_Arka_Roy.pdf
+colors:
+    highlights:
+        blue: '#009ff7'
+        green: '#87d14b'
+        red: '#FF007C'
+    mono:
+        dark: '#000000'
+        medium: '#777777'
+        light: '#FFFFFF'
+    bg: '#EAF1F4'
+collections:
+  steps:
+    title: Steps
+    output: false
+pygments: true
+permalink: pretty 
+exclude:
+ - Rakefile
+ - README.markdown
+ - .git

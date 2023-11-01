@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Spark on Yarn &mdash; Arka Roy</title>
+    
+    
+    
+    <meta name="description" content="Apache Spark on Yarn" />
+    
+    
+    <meta name="keywords" content="Arka Roy,Arka" />
+    <meta name="author" content="Arka Roy" />
+    <link rel="alternate" type="application/atom+xml" title="Arka Roy" href="/feed.xml">
+    <link href="" rel="openid2.provider" />
+    <link href="" rel="openid2.local_id" />
+    <link href="" rel="openid.server" />
+    <link href="" rel="openid.delegate" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/themes/default/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/themes/default/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/themes/default/images/title.jpg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+    <meta name="viewport" content="width=800" />    
+    
+    <link rel="stylesheet" href="/assets/themes/default/css/timeline.css" media="screen" />            
+    
+    <link rel="stylesheet" href="/assets/themes/default/css/screen.css?52480=52480" media="screen" />            
+    
+    <link rel="stylesheet" href="/assets/themes/default/css/print.css" media="screen" />            
+    
+        
+    <!--[if IE]>
+    <script src="/assets/themes/default/js/html5.js"></script>
+    <![endif]-->    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="/assets/themes/default/js/site.js" type="text/javascript"></script>
+    
+    
+</head>
+<body class="">
+<div id="wrapper" >
+<div id="inner_wrapper">    
+    <div id="container">          
+        <header id="title">
+            <h1><a href="/">Arka Roy</a></h1>
+        </header>        
+        <nav id="main_nav">
+            <ul>
+                
+                <li>
+                    
+                    <a href="/work/" class="work">work</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/research/" class="research">research</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/projects/" class="projects">projects</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/blog/" class="blog">blog</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="#" class="resume">resume</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>        
+        <div id="content">
+        <div id="popupOverlay" class="popup-overlay">
+            <div id="popupContent" class="popup-content">
+                <span id="closePopupButton" class="close-button">&times;</span>
+                <iframe style="width: 700px; height: 700px" id="popupIframe" src="/assets/cv/CV_Arka_Roy.pdf"></iframe>
+            </div>
+        </div>
+        <article>
+    <header>
+        <h1><a href="/2020/10/01/spark-yarn/" rel="bookmark" title="link to this post">Spark on Yarn</a></h1>
+        <time datetime="2020-10-01" pubdate>Published Thursday, October 01, 2020</time>
+    </header>
+    <p>What it is like to run Apache Spark on a  <strong>Yarn Cluster</strong> ?
+How does it increase the efficiency of the nodes and reduces the cost ?
+What is Yarn for that matter ?</p>
+
+<p>Let’s find out through some visuals and pointers !</p>
+
+<h3 id="important-concepts-and-their-relations">Important Concepts and their relations</h3>
+<p><img src="https://snipboard.io/gkaB82.jpg" alt="drawing" width="600" /></p>
+
+<h3 id="how-are-resource-manager-and-node-manager-related-">How are Resource Manager and Node Manager related ?</h3>
+
+<p>In cluster-mode, the resource allocation has the structure shown below.</p>
+
+<p><img src="https://snipboard.io/aMeilB.jpg" alt="drawing" width="400" /></p>
+
+<h3 id="concepts-in-bits-">Concepts in bits !</h3>
+
+<h4 id="resource-manager">Resource Manager</h4>
+<p>ResourceManager is the ultimate authority that decides the allocation of resources between all applications in the system. It has minions that run on all nodes of the cluster called NodeManager. Also, ResourceManager has a plug-in component scheduler that is responsible for allocating resources for various running applications.
+The yarn container which runs the Spark Driver is also called Spark AM (Application Master)</p>
+
+<h4 id="yarn-container">Yarn Container</h4>
+<p>Containers are computing units, a kind of wrappers for node resources to perform tasks of a user application. They are the main computing units that are managed by YARN. Containers have their own parameters that can be configured on-demand (e.g. ram, CPU, etc.).</p>
+
+<h4 id="node-manager">Node Manager</h4>
+<p>Containers on each node are controlled by NodeManager daemon</p>
+
+<h4 id="application-master">Application Master</h4>
+<p>When launching a new application on a cluster, ResourceManager allocates one container for ApplicationMaster. ApplicationMaster for each application is a framework-specific entity that is tasked with negotiating resources with ResourceManager and working with NodeManager(s) to perform and monitor component tasks
+ApplicationMaster will be responsible for the entire lifecycle of the distributed application.</p>
+
+<h4 id="language-agnostic">Language Agnostic</h4>
+<p>ResourceManager, NodeManager, and the container do not care about the type of application or task. All application framework code is simply transferred to the ApplicationMaster so that any distributed framework can be supported by YARN — as long as someone implements a suitable ApplicationMaster for it.</p>
+
+<p><img src="https://snipboard.io/1lQXPE.jpg" alt="drawing" width="400" /></p>
+
+        
+
+    
+</article>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_identifier = "/2020/10/01/spark-yarn/";
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://michaelmonteleone.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=michaelmonteleone">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+        </div>
+    </div>    
+    <div id="footer-wrapper">
+        <footer>
+            <div class="social">
+                <div class="contact-icons">
+                    <a href="mailto:arka.nitdgp14@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href="https://scholar.google.com/citations?user=MF3j7q4AAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar-square ai-1x"></i></a>
+                    <a href="http://www.linkedin.com/in/arka-nitd" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="http://github.com/arka-nitd" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/arka_nitd" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-note">
+                Copyright &copy; 2023 Arka Roy. Powered by Jekyll and inspired by <a href="https://michaelmonteleone.net/">michaelmonteleone.net</a>
+            </div>
+        </footer>
+        <div style="clear:both"></div>
+    </div>    
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+} catch(err) {}
+</script>
+</body>
+</html>
