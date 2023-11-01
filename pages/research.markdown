@@ -9,7 +9,7 @@ permalink: /research.html
 
 ### Machine Leaning
 
-* [Designing Bolt](https://technology.inmobi.com/articles/2022/06/05/resource-optimization-and-sla-enhancement-using-spark-jobs) <span>Bolt is a library created to perform in-memory latency predictions in JVM based environment at sub-millisecond latencies</span> <span>Discusses some of the native optimization done to achieve the efficiency metrics</span>
+* [Designing Bolt](https://technology.inmobi.com/articles/2022/07/22/decision-tree-model-prediction-library-create-and-optimize-to-work-at-scale) <span>Bolt is a library created to perform in-memory latency predictions in JVM based environment at sub-millisecond latencies</span> <span>Discusses some of the native optimization done to achieve the efficiency metrics</span>
 
 ### Apache Spark
 
