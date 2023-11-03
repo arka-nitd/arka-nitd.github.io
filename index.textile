@@ -40,7 +40,7 @@ h4. My recent posts
 
 h4. Recent Career Updates
 
- * "SDE 4 @ InMobi":http://github.com/mmonteleone/delorean <span class="line-meta">July 2023, Promoted to SDE 4</span>
+ * "SDE 4 @ InMobi":/work <span class="line-meta">July 2023, Promoted to SDE 4</span>
 
 <span class="more">"More &rarr;(What's happening in my life)":/work/</span>
 
